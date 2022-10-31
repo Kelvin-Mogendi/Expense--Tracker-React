@@ -1,4 +1,5 @@
 import "./NewExpense.css";
+import "./ExpenseForm.css";
 import ExpenseForm from "./ExpenseForm";
 import { useState } from "react";
 
@@ -14,9 +15,12 @@ function NewExpense(props) {
     setClicked(false);
   }
   return (
-    <div className="new-expense">
+    <div className="new-expense ">
       {!clicked && (
-        <button onClick={addNewExpenseClickHandler}> Add New Expense</button>
+        <button className="button-73" onClick={addNewExpenseClickHandler}>
+          {" "}
+          Add New Expense
+        </button>
       )}
       {clicked && (
         <ExpenseForm
